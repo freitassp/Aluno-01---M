@@ -179,3 +179,35 @@ footer{
     }
 
 }
+
+
+
+.acoes-sustentaveis{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    margin:25px 0;
+}
+
+.acoes-sustentaveis label{
+    background:#1b4332;
+    padding:12px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
+    text-align:left;
+}
+
+.acoes-sustentaveis label:hover{
+    background:#2d6a4f;
+}
+
+.acoes-sustentaveis input{
+    margin-right:8px;
+    transform:scale(1.2);
+}
+
+.claro .acoes-sustentaveis label{
+    background:#e9ecef;
+    color:#222;
+}

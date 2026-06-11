@@ -8,15 +8,53 @@ const mensagem = document.getElementById("mensagem");
 
 const modoEscuro = document.getElementById("modoEscuro");
 
-let totalArvores = 0;
-let totalAgua = 0;
-let totalEspecies = 0;
+modoEscuro.addEventListener("click", () => {
+    document.body.classList.toggle("claro");
+});
 
 iniciar.addEventListener("click", () => {
 
-    animarContador(arvores, 50000);
-    animarContador(agua, 250000);
-    animarContador(especies, 120);
+    const escolhas =
+    document.querySelectorAll(".acaoCheck:checked");
+
+    let pontos = 0;
+
+    escolhas.forEach(item => {
+        pontos += Number(item.value);
+    });
+
+    const totalArvores = pontos * 1000;
+    const totalAgua = pontos * 5000;
+    const totalEspecies = pontos * 4;
+
+    animarContador(arvores, totalArvores);
+    animarContador(agua, totalAgua);
+    animarContador(especies, totalEspecies);
+
+    if(pontos <= 20){
+
+        mensagem.textContent =
+        "⚠️ Poucas ações sustentáveis foram escolhidas. O planeta ainda enfrenta grandes desafios ambientais.";
+
+    }
+    else if(pontos <= 50){
+
+        mensagem.textContent =
+        "🌱 Você já está contribuindo para um futuro melhor, mas ainda existem oportunidades para ampliar os impactos positivos.";
+
+    }
+    else if(pontos <= 80){
+
+        mensagem.textContent =
+        "🌳 Excelente! Suas escolhas ajudam a preservar recursos naturais e fortalecer a produção sustentável.";
+
+    }
+    else{
+
+        mensagem.textContent =
+        "🌎 Incrível! Você construiu um cenário de equilíbrio entre produção agrícola, preservação ambiental e qualidade de vida para as futuras gerações.";
+
+    }
 
 });
 
@@ -58,12 +96,6 @@ document.querySelectorAll(".acao").forEach(card => {
 
 });
 
-modoEscuro.addEventListener("click", () => {
-
-    document.body.classList.toggle("claro");
-
-});
-
 function animarContador(elemento, destino){
 
     let atual = 0;
@@ -84,6 +116,3 @@ function animarContador(elemento, destino){
     },20);
 
 }
-
-
-
