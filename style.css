@@ -1,0 +1,178 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#081c15;
+    color:white;
+    transition:.4s;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px;
+    background:#0b2e1e;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.logo{
+    font-size:1.5rem;
+    font-weight:bold;
+}
+
+#modoEscuro{
+    padding:10px;
+    cursor:pointer;
+}
+
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:30px;
+    padding:50px 10%;
+    flex-wrap:wrap;
+}
+
+.hero img{
+    width:400px;
+    max-width:100%;
+    border-radius:20px;
+}
+
+.hero-texto{
+    max-width:500px;
+}
+
+.hero-texto h1{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.hero-texto p{
+    margin-bottom:20px;
+    line-height:1.6;
+}
+
+.hero button{
+    padding:15px 25px;
+    border:none;
+    background:#52b788;
+    color:white;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.indicadores{
+    text-align:center;
+    padding:50px 10%;
+}
+
+.cards-indicadores{
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+.card{
+    background:#1b4332;
+    padding:30px;
+    border-radius:15px;
+    width:250px;
+}
+
+.card h3{
+    font-size:2rem;
+    color:#95d5b2;
+}
+
+.ideias{
+    padding:50px 10%;
+}
+
+.ideias h2{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.acao{
+    background:#1b4332;
+    border-radius:15px;
+    overflow:hidden;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.acao:hover{
+    transform:translateY(-10px);
+}
+
+.acao img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.acao h3{
+    padding:20px;
+    text-align:center;
+}
+
+.futuro{
+    text-align:center;
+    padding:50px 10%;
+}
+
+.futuro img{
+    width:100%;
+    max-width:900px;
+    border-radius:20px;
+}
+
+#mensagem{
+    margin-top:20px;
+    font-size:1.2rem;
+}
+
+footer{
+    background:#0b2e1e;
+    padding:30px;
+    text-align:center;
+}
+
+.claro{
+    background:#f4f4f4;
+    color:#222;
+}
+
+.claro .card,
+.claro .acao{
+    background:white;
+}
+
+@media(max-width:768px){
+
+    .hero-texto h1{
+        font-size:2rem;
+    }
+
+    .card{
+        width:100%;
+    }
+
+}
