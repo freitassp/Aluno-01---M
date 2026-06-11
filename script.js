@@ -87,26 +87,3 @@ function animarContador(elemento, destino){
 
 
 
-const resultadoEscolhas =
-document.getElementById("resultadoEscolhas");
-
-document.querySelectorAll(".escolha")
-.forEach(botao => {
-
-    botao.addEventListener("click", () => {
-
-        if(botao.dataset.tipo === "boa"){
-
-            resultadoEscolhas.innerHTML =
-            "✅ Excelente escolha! O planeta ganha mais árvores, água preservada e biodiversidade.";
-
-        }else{
-
-            resultadoEscolhas.innerHTML =
-            "⚠️ Essa decisão gera impactos ambientais negativos e reduz a qualidade de vida das futuras gerações.";
-
-        }
-
-    });
-
-});
