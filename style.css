@@ -154,6 +154,7 @@ footer{
     background:#0b2e1e;
     padding:30px;
     text-align:center;
+    color:white;
 }
 
 .claro{
@@ -210,4 +211,8 @@ footer{
 .claro .acoes-sustentaveis label{
     background:#e9ecef;
     color:#222;
+}
+
+.claro footer{
+    color:white;
 }
